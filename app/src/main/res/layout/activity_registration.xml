@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegistrationActivity"
+    android:background="@color/light_white">
+
+
+
+    <TextView
+        android:id="@+id/txtView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50sp"
+        android:text="@string/food_recipes"
+        android:textColor="@color/teal_200"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:fontFamily="cursive"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp"
+        android:text="@string/register"
+        android:textColor="@color/pink"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtView" />
+
+
+
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/CardUsername"
+            android:layout_width="300dp"
+            android:layout_height="80dp"
+            app:neumorph_shapeType="pressed"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            app:layout_constraintWidth_percent=".8"
+            android:layout_marginTop="30sp">
+
+            <EditText
+                android:id="@+id/edtName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/enter_your_name"
+                android:background="@null"
+                android:padding="15dp"
+                android:textColor="@color/teal_200"
+                android:textSize="20sp"
+                android:drawableLeft="@drawable/baseline_account_box_24"
+                android:drawablePadding="20sp" />
+        </soup.neumorphism.NeumorphCardView>
+
+    <soup.neumorphism.NeumorphCardView
+        android:id="@+id/CardUseremail"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        app:neumorph_shapeType="pressed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CardUsername"
+        app:layout_constraintWidth_percent=".8">
+
+        <EditText
+            android:id="@+id/edtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/enter_your_email"
+            android:background="@null"
+            android:padding="15dp"
+            android:textColor="@color/teal_200"
+            android:textSize="20sp"
+            android:drawableLeft="@drawable/baseline_email_24"
+            android:drawablePadding="20sp" />
+    </soup.neumorphism.NeumorphCardView>
+
+    <soup.neumorphism.NeumorphCardView
+        android:id="@+id/CardUserpassword"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        app:neumorph_shapeType="pressed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CardUseremail"
+        app:layout_constraintWidth_percent=".8">
+
+        <EditText
+            android:id="@+id/edtpassword"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/enter_your_password"
+            android:background="@null"
+            android:padding="15dp"
+            android:textColor="@color/teal_200"
+            android:textSize="20sp"
+            android:drawableLeft="@drawable/baseline_vpn_key_24"
+            android:drawablePadding="20sp" />
+    </soup.neumorphism.NeumorphCardView>
+
+    <soup.neumorphism.NeumorphButton
+        android:id="@+id/btnregi"
+        android:layout_width="0dp"
+        android:layout_height="60sp"
+        android:layout_marginTop="110sp"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="60dp"
+        android:text="@string/register"
+        android:textAlignment="center"
+        android:padding="15dp"
+        android:textSize="19sp"
+        android:textColor="@color/teal_200"
+        android:backgroundTint="@color/pink"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CardUserpassword" />
+
+    <TextView
+        android:id="@+id/txtregi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp"
+        android:layout_marginStart="110dp"
+        android:text="@string/already_registered"
+        android:textAlignment="center"
+        android:textColor="@color/teal_200"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnregi" />
+
+    <TextView
+        android:id="@+id/txtsignin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="@string/sign_in"
+        android:textAlignment="center"
+        android:textColor="@color/pink"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/txtregi"
+        app:layout_constraintStart_toEndOf="@+id/txtregi"
+        app:layout_constraintTop_toTopOf="@+id/txtregi" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
